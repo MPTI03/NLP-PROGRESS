@@ -1,14 +1,14 @@
 # Sentiment analysis
 
-Sentiment analysis is the task of classifying the polarity of a given text.
+Sentiment analysis adalah tugas mengklasifikasikan polaritas teks yang diberikan.
 
 ### IMDb
 
-The [IMDb dataset](https://ai.stanford.edu/~ang/papers/acl11-WordVectorsSentimentAnalysis.pdf) is a binary
-sentiment analysis dataset consisting of 50,000 reviews from the Internet Movie Database (IMDb) labeled as positive or
-negative. The dataset contains an even number of positive and negative reviews. Only highly polarizing reviews are considered. 
-A negative review has a score ≤ 4 out of 10, and a positive review has a score ≥ 7 out of 10. No more than 30 reviews are 
-included per movie. Models are evaluated based on accuracy.
+[IMDb dataset](https://ai.stanford.edu/~ang/papers/acl11-WordVectorsSentimentAnalysis.pdf) adalah biner
+dataset analisis sentimen yang terdiri dari 50.000 ulasan dari Internet Movie Database (IMDb) berlabel positif atau
+negatif. Dataset berisi bahkan jumlah tinjauan positif dan negatif. Hanya ulasan yang sangat terpolarisasi yang dipertimbangkan.
+Ulasan negatif memiliki skor ≤ 4 dari 10, dan ulasan positif memiliki skor ≥ 7 dari 10. Tidak lebih dari 30 ulasan
+termasuk per film. Model dievaluasi berdasarkan akurasi.
 
 | Model           | Accuracy  |  Paper / Source |
 | ------------- | :-----:| --- |
@@ -23,12 +23,12 @@ included per movie. Models are evaluated based on accuracy.
 
 ### SST
 
-The [Stanford Sentiment Treebank](https://nlp.stanford.edu/sentiment/index.html) 
-contains 215,154 phrases with fine-grained sentiment labels in the parse trees
-of 11,855 sentences in movie reviews. Models are evaluated either on fine-grained
-(five-way) or binary classification based on accuracy.
+[Stanford Sentiment Treebank](https://nlp.stanford.edu/sentiment/index.html) 
+berisi 215.154 frasa dengan label sentimen berbutir halus di pohon parse
+dari 11.855 kalimat dalam ulasan film. Model dievaluasi baik pada butiran halus
+(lima arah) atau klasifikasi biner berdasarkan akurasi.
 
-Fine-grained classification (SST-5, 94,2k examples):
+Fine-grained klasifikasi (SST-5, 94,2k examples):
 
 | Model           | Accuracy |  Paper / Source |
 | ------------- | :-----:| --- |
@@ -37,7 +37,7 @@ Fine-grained classification (SST-5, 94,2k examples):
 | BCN+ELMo (Peters et al., 2018) | 54.7 | [Deep contextualized word representations](https://arxiv.org/abs/1802.05365) |
 | BCN+Char+CoVe (McCann et al., 2017) | 53.7 | [Learned in Translation: Contextualized Word Vectors](https://arxiv.org/abs/1708.00107) |
 
-Binary classification (SST-2, 56.4k examples):
+Binary klasifikasi (SST-2, 56.4k examples):
 
 | Model           | Accuracy  |  Paper / Source | Code |
 | ------------- | :-----:| --- | --- |
@@ -55,11 +55,11 @@ Binary classification (SST-2, 56.4k examples):
 
 ### Yelp
 
-The [Yelp Review dataset](https://papers.nips.cc/paper/5782-character-level-convolutional-networks-for-text-classification.pdf)
-consists of more than 500,000 Yelp reviews. There is both a binary and a fine-grained (five-class)
-version of the dataset. Models are evaluated based on error (1 - accuracy; lower is better).
+[Yelp Review dataset](https://papers.nips.cc/paper/5782-character-level-convolutional-networks-for-text-classification.pdf)
+terdiri dari lebih dari 500.000 ulasan Yelp. Ada biner dan berbutir halus (kelas lima)
+versi dataset. Model dievaluasi berdasarkan kesalahan (1 - akurasi; lebih rendah lebih baik).
 
-Fine-grained classification: 
+Fine-grained klasifikasi : 
 
 | Model           | Error  |  Paper / Source |
 | ------------- | :-----:| --- |
@@ -71,7 +71,7 @@ Fine-grained classification:
 | CNN (Johnson and Zhang, 2016) | 32.39 | [Supervised and Semi-Supervised Text Categorization using LSTM for Region Embeddings](https://arxiv.org/abs/1602.02373) |
 | Char-level CNN (Zhang et al., 2015) | 37.95 | [Character-level Convolutional Networks for Text Classification](https://papers.nips.cc/paper/5782-character-level-convolutional-networks-for-text-classification.pdf) |
 
-Binary classification:
+Binary klasifikasi:
 
 | Model           | Error |  Paper / Source |
 | ------------- | :-----:| --- |
@@ -85,28 +85,28 @@ Binary classification:
 
 
 ### SemEval
-SemEval (International Workshop on Semantic Evaluation) has a specific task for Sentiment analysis.
-Latest year overview of such task (Task 4) can be reached at: http://www.aclweb.org/anthology/S17-2088
+SemEval (International Workshop on Semantic Evaluation) memiliki tugas khusus untuk analisis Sentimen.
+Ikhtisar tahun terakhir dari tugas tersebut (Tugas 4) dapat diperoleh di: http://www.aclweb.org/anthology/S17-2088
 
-SemEval-2017 Task 4 consists of five subtasks, each offered for both Arabic and English:
+SemEval-2017 Tugas 4 terdiri dari lima subtugas, masing-masing ditawarkan untuk bahasa Arab dan Inggris:
 
-1. Subtask A: Given a tweet, decide whether it expresses POSITIVE, NEGATIVE or NEUTRAL
-sentiment.
+1.Subtask A: Diberikan tweet, putuskan apakah itu mengekspresikan POSITIF, NEGATIF, atau NETRAL
+sentimen.
 
-2. Subtask B: Given a tweet and a topic, classify the sentiment conveyed towards that
-topic on a two-point scale: POSITIVE vs. NEGATIVE.
+2. Subtask B: Diberikan tweet dan topik, mengklasifikasikan sentimen yang disampaikan ke sana
+topik pada skala dua poin: POSITIF vs NEGATIF.
 
-3. Subtask C: Given a tweet and a topic, classify the sentiment conveyed in the
-tweet towards that topic on a five-point scale: STRONGLYPOSITIVE, WEAKLYPOSITIVE,
-NEUTRAL, WEAKLYNEGATIVE, and STRONGLYNEGATIVE.
+3. Subtask C: Diberikan tweet dan sebuah topik, mengklasifikasikan sentimen yang disampaikan dalam
+tweet menuju topik itu pada skala lima poin: STRONGLYPOSITIVE, WEAKLYPOSITIVE,
+NETRAL, LEMAH NEGATIF, dan SANGAT NEGATIF.
 
-4. Subtask D: Given a set of tweets about a topic, estimate the distribution of tweets
-across the POSITIVE and NEGATIVE classes. 
+4. Subtask D: Diberikan satu set tweet tentang suatu topik, perkirakan distribusi tweet
+di seluruh kelas POSITIF dan NEGATIF.
 
 5. Subtask E: Given a set of tweets about a topic, estimate the distribution of tweets
 across the five classes: STRONGLYPOSITIVE, WEAKLYPOSITIVE, NEUTRAL, WEAKLYNEGATIVE, and STRONGLYNEGATIVE.
 
-Subtask A  results:
+Hasil subtask A  :
 
 | Model           | F1-score |  Paper / Source |
 | ------------- | :-----:| --- |
@@ -118,9 +118,9 @@ Subtask A  results:
 
 ### Sentihood
 
-[Sentihood](http://www.aclweb.org/anthology/C16-1146) is a dataset for targeted aspect-based sentiment analysis (TABSA), which aims
-to identify fine-grained polarity towards a specific aspect. The dataset consists of 5,215 sentences,
-3,862 of which contain a single target, and the remainder multiple targets.
+[Sentihood](http://www.aclweb.org/anthology/C16-1146) adalah dataset untuk analisis sentimen berbasis aspek yang ditargetkan (TABSA), yang bertujuan
+untuk mengidentifikasi polaritas berbutir halus terhadap aspek tertentu. Dataset terdiri dari 5.215 kalimat,
+3,862 di antaranya berisi target tunggal, dan sisanya beberapa target.
 
 Dataset mirror: https://github.com/uclmr/jack/tree/master/data/sentihood
 
@@ -133,17 +133,17 @@ Dataset mirror: https://github.com/uclmr/jack/tree/master/data/sentihood
 
 ### SemEval-2014 Task 4
 
-The [SemEval-2014 Task 4](http://alt.qcri.org/semeval2014/task4/) contains two domain-specific datasets for laptops and restaurants, consisting of over 6K sentences with fine-grained aspect-level human annotations.
+[SemEval-2014 Task 4](http://alt.qcri.org/semeval2014/task4/) berisi dua dataset khusus domain untuk laptop dan restoran, yang terdiri dari lebih dari 6 ribu kalimat dengan anotasi manusia tingkat aspek berbutir halus.
 
-The task consists of the following subtasks:
+Tugas ini terdiri dari subtugas berikut:
 
-- Subtask 1: Aspect term extraction
+- Subtask 1: Aspek istilah ekstraksi
 
-- Subtask 2: Aspect term polarity
+- Subtask 2: Polaritas istilah aspek
 
-- Subtask 3: Aspect category detection
+- Subtask 3: Deteksi kategori aspek
 
-- Subtask 4: Aspect category polarity
+- Subtask 4: Polaritas kategori aspek
 
 Preprocessed dataset: https://github.com/songyouwei/ABSA-PyTorch/tree/master/datasets/semeval14   
 https://github.com/howardhsu/BERT-for-RRC-ABSA (with both subtask 1 and subtask 2)
@@ -162,7 +162,7 @@ Subtask 2 results:
 | Model           | Restaurant (acc) | Laptop (acc) |  Paper / Source |  Code |
 | ------------- | :-----:| :-----:| --- | --- |
 | BERT-ADA (Rietzler, Alexander, et al., 2019) | 87.89 | 80.23 | [Adapt or Get Left Behind: Domain Adaptation through BERT Language Model Finetuning for Aspect-Target Sentiment Classification](https://arxiv.org/pdf/1908.11860.pdf) | [official](https://github.com/deepopinion/domain-adapted-atsc)
-| LCF-BERT (Zeng, Yang, et al., 2019) | 87.14 | 82.45 | [LCF: A Local Context Focus Mechanism for Aspect-Based Sentiment Classification](https://www.mdpi.com/2076-3417/9/16/3389/pdf) | [official](https://github.com/yangheng95/LCF-ABSA) / [Link](https://github.com/songyouwei/ABSA-PyTorch/blob/master/models/lcf_bert.py)
+| LCF-BERT (Zeng, Yang, et al., 2019) | 87.14 | 82.45 | [LCF: A Local Context Focus Mechanism for Aspect-Based Sentiment Classification](https://www.mdpi.com/2076-3417/9/16/3389/pdf) | [official](https://github.com/songyouwei/ABSA-PyTorch/blob/master/models/lcf_bert.py)
 | BERT-PT (Hu, Xu, et al., 2019) | 84.95 | 78.07 | [BERT Post-Training for Review Reading Comprehension and Aspect-based Sentiment Analysis](https://arxiv.org/pdf/1904.02232.pdf) | [official](https://github.com/howardhsu/BERT-for-RRC-ABSA)
 | AOA (Huang, Binxuan, et al., 2018) | 81.20 | 74.50 | [Aspect Level Sentiment Classification with Attention-over-Attention Neural Networks](https://arxiv.org/pdf/1804.06536.pdf) | [Link](https://github.com/songyouwei/ABSA-PyTorch/blob/master/models/aoa.py)
 | TNet (Li, Xin, et al., 2018) | 80.79 | 76.01 | [Transformation Networks for Target-Oriented Sentiment Classification](http://aclweb.org/anthology/P18-1087) | [Official](https://github.com/lixin4ever/TNet) / [Link](https://github.com/songyouwei/ABSA-PyTorch/blob/master/models/tnet_lf.py)
@@ -189,11 +189,11 @@ This is the same task on sentiment classification, where the given text is a rev
 
 # Subjectivity analysis
 
-A related task to sentiment analysis is the subjectivity analysis with the goal of labeling an opinion as either subjective or objective.
+Tugas terkait dengan analisis sentimen adalah analisis subjektivitas dengan tujuan memberi label opini sebagai subyektif atau objektif.
 
 ### SUBJ
 
-[Subjectivity dataset](http://www.cs.cornell.edu/people/pabo/movie-review-data/) includes 5,000 subjective and 5,000 objective processed sentences. 
+[Subjectivity dataset](http://www.cs.cornell.edu/people/pabo/movie-review-data/) termasuk 5.000 kalimat subjektif dan 5.000 kalimat yang diproses secara objektif. 
 
 | Model           | Accuracy |  Paper / Source |
 | ------------- | :-----:| --- |
@@ -203,4 +203,4 @@ A related task to sentiment analysis is the subjectivity analysis with the goal 
 | USE (Cer et al., 2018) | 93.90 | [Universal Sentence Encoder](https://arxiv.org/pdf/1803.11175.pdf) |
 | Fast Dropout (Wang and Manning, 2013) | 93.60 | [Fast Dropout Training](http://proceedings.mlr.press/v28/wang13a.pdf) |
 
-[Go back to the README](../README.md)
+[Kembali ke README](../README.md)
