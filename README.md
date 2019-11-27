@@ -1,8 +1,8 @@
 # Tracking Progress in Natural Language Processing
 
-## Table of contents
+## DAFTAR ISI
 
-### English
+### INDONESIA
 
 - [Automatic speech recognition](english/automatic_speech_recognition.md)
 - [CCG](english/ccg.md)
